@@ -143,7 +143,7 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = "users.CustomUSer"
 
 # Django-crispy-forms
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Django.contrib.sites
 SITE_ID = 1
