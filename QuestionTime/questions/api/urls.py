@@ -16,6 +16,16 @@ urlpatterns = [
     path(
         "questions/<slug:slug>/answer/",
         question_views.AnswerCreateAPIView.as_view(),
-        name="create-answer"
+        name="answer_create"
+    ),
+    path(
+        "answers/<int:pk>/",
+        question_views.AnswerRUDAPIView.as_view(),
+        name="answer_detail"
+    ),
+    path(
+        "answers/<int:pk>/like/",
+        question_views.AnswerLikeAPIView.as_view(),
+        name="answer_like"
     ),
 ]

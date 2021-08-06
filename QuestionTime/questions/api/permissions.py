@@ -1,7 +1,7 @@
 from rest_framework import permissions
 
 
-class IsAuthenticatedOrReadOnly(permissions.BasePermission):
+class IsAuthorOrReadOnly(permissions.BasePermission):
     """Override has_obj method to provide write permission to auth users only"""
 
     def has_object_permission(self, request, view, obj):
