@@ -18,7 +18,7 @@ class AnswerSerializer(serializers.ModelSerializer):
 
     def get_created_at(self, instance):
         """Return created at field in american date time format"""
-        return instance.created_at.strftime("%B %d %Y")  # %B->Month %d->day th
+        return instance.created_at.strftime("%B %d, %Y")  # %B->Month %d->day th
 
     def get_like_count(self, instance):
         """Return total likes of the Answer"""
@@ -45,7 +45,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 
     def get_created_at(self, instance):
         """Return created at field in american date time format"""
-        return instance.created_at.strftime("%B %d %Y")  # %B->Month %d->day th
+        return instance.created_at.strftime("%B %d, %Y")  # %B->Month %d->day th
 
     def get_answer_count(self, instance):
         """return the number of total answer"""
